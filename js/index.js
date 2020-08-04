@@ -54,5 +54,5 @@ p.forEach(ele => {
 
 const body = document.getElementsbyTagName("body");
 body.addEventListener("scroll", event => {
-    body.style.animation = "initial "
+    body.style.color = "viridian"
 })
