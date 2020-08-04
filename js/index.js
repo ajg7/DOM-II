@@ -22,3 +22,37 @@ nav.forEach(ele => {
         }, 1500)
     })
 })
+
+
+/*3rd Event Listener*/
+
+const header2s = Array.from(document.getElementsByTagName("h2"));
+const delay = (ele, color, time) => {
+    setInterval (() => {
+        ele.style.color = color;
+    }, time)
+}
+
+header2s.forEach(ele => {
+    ele.addEventListener("mouseleave", event => {
+        ele.style.textAlign = "center"
+        ele.style.backgroundColor = "crimson"
+        delay(ele, "yellow", 3000);
+    })
+})
+
+/*4th Event Listener*/
+const p = Array.from(document.getElementsByTagName("p"));
+
+p.forEach(ele => {
+    ele.addEventListener("copy", event => {
+        ele.style.fontSize = "35px"
+    })
+})
+
+/*5th Event Listener*/
+
+const body = document.getElementsbyTagName("body");
+body.addEventListener("scroll", event => {
+    body.style.animation = "initial "
+})
