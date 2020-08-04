@@ -11,7 +11,7 @@ logoHeading.addEventListener("mouseover", event => {
 
 const nav = document.querySelectorAll("header nav a");
 nav.forEach(ele => {
-    ele.addEventListener("click", event => {
+    ele.addEventListener("mousemove", event => {
         ele.style.color = "blue";
         ele.style.fontSize = "50px"
         ele.style.fontWeight = "bold";
@@ -120,7 +120,7 @@ buttons.forEach(ele => {
         let randomNum = Math.floor(Math.random() * 1000)
         let randomColors = ["blue", "green", "red", "yellow", "orange", "brown", "black", "seagrass", "violet"];
 
-        
+
         ele.style.width = `${randomNum.toString()}px`
         ele.style.height = `${randomNum.toString()}px`
         ele.style.backgroundColor = `${randomColors[Math.ceil(Math.random()*randomColors.length)]}`
@@ -128,3 +128,11 @@ buttons.forEach(ele => {
 })
 
 /*10th Event Listener*/
+
+const destinationsText = Array.from(document.querySelectorAll(".content-pick .destination p"))
+
+destinationsText.forEach(ele => {
+    ele.addEventListener("wheel", event => {
+        ele.textContent = "Pokem ipsum dolor sit amet Exeggutor Kecleon Wing Attack Doduo Red Unown. Sunt in culpa Drilbur Calcium Hoenn Shieldon Wynaut Charizard. Growl Venonat Scolipede Espeon Charizard Barboach Hidden Machine. Duis aute irure dolor in reprehenderit in voluptate they're comfy and easy to wear Onix what kind of Pokemon are you Fog Badge Ampharos Noctowl. Pewter City Marill Slakoth Bronzong Rattata Treecko Cottonee."
+    })
+})
