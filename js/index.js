@@ -58,3 +58,57 @@ busImage.addEventListener("dblclick", event => {
     busImage.style.width = "100px"
     busImage.style.height = "250px"
 })
+
+/*6th Event Listener*/
+const sunHeader = document.querySelector(".content-pick .destination h4");
+console.log(sunHeader)
+sunHeader.addEventListener("auxclick", event => {
+    sunHeader.animate([
+        {   
+            fontSize: "10px",
+            color: "purple",
+        },
+        {
+            fontSize: "15px",
+            color: "crimson",
+        },
+        {
+            fontSize: "20px",
+            color: "lightgreen",
+        },
+        {
+            fontSize: "25px",
+            color: "silver",
+        },
+        {
+            fontSize: "30px",
+            color: "pink"
+        },
+        {
+            fontSize: "35px",
+            color: "violet",
+        },
+        {
+            fontSize: "40px",
+            color: "white"
+        },
+        {
+            fontSize: "45px",
+            color: "black",
+        },
+        {
+            fontSize: "50px",
+            color: "blue",
+        }
+    ], 10000)
+})
+
+/*7th Event Listener*/
+const mountainHeader = document.querySelector(".content-pick .destination:nth-child(2) h4")
+console.log(mountainHeader)
+/*8th Event Listener*/
+const islandHeader = document.querySelector(".content-pick .destination:nth-child(3) h4")
+console.log(islandHeader)
+/*9th Event Listener*/
+
+/*10th Event Listener*/
