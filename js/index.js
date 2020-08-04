@@ -106,9 +106,25 @@ sunHeader.addEventListener("auxclick", event => {
 /*7th Event Listener*/
 const mountainHeader = document.querySelector(".content-pick .destination:nth-child(2) h4")
 console.log(mountainHeader)
+
+
 /*8th Event Listener*/
 const islandHeader = document.querySelector(".content-pick .destination:nth-child(3) h4")
 console.log(islandHeader)
 /*9th Event Listener*/
+
+const buttons = Array.from(document.getElementsByClassName("btn"));
+console.log(buttons)
+buttons.forEach(ele => {
+    ele.addEventListener("click", event => {
+        let randomNum = Math.floor(Math.random() * 1000)
+        let randomColors = ["blue", "green", "red", "yellow", "orange", "brown", "black", "seagrass", "violet"];
+
+        
+        ele.style.width = `${randomNum.toString()}px`
+        ele.style.height = `${randomNum.toString()}px`
+        ele.style.backgroundColor = `${randomColors[Math.ceil(Math.random()*randomColors.length)]}`
+    })
+})
 
 /*10th Event Listener*/
