@@ -52,12 +52,16 @@ p.forEach(ele => {
 
 /*5th Event Listener*/
 
-const busImage = document.querySelector(".container .intro img");
+const busImage = Array.from(document.getElementsByTagName("img"));
 console.log(busImage)
-busImage.addEventListener("dblclick", event => {
-    busImage.style.width = "100px"
-    busImage.style.height = "250px"
+busImage.forEach(ele=>{
+    ele.addEventListener("dblclick", event => {
+        let randomNum = Math.floor(Math.random() * 1000)
+        ele.style.width = `${randomNum.toString()}px`
+        ele.style.height = `${randomNum.toString()}px`
+    })
 })
+
 
 /*6th Event Listener*/
 const sunHeader = document.querySelector(".content-pick .destination h4");
@@ -108,16 +112,19 @@ const mountainHeader = document.querySelector(".content-pick .destination:nth-ch
 console.log(mountainHeader)
 
 
+
 /*8th Event Listener*/
 const islandHeader = document.querySelector(".content-pick .destination:nth-child(3) h4")
 console.log(islandHeader)
+
+
+
 /*9th Event Listener*/
 
 const buttons = Array.from(document.getElementsByClassName("btn"));
 console.log(buttons)
 buttons.forEach(ele => {
     ele.addEventListener("click", event => {
-        let randomNum = Math.floor(Math.random() * 1000)
         let randomColors = ["blue", "green", "red", "yellow", "orange", "brown", "black", "seagrass", "violet"];
 
 
