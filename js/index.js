@@ -52,7 +52,9 @@ p.forEach(ele => {
 
 /*5th Event Listener*/
 
-const body = document.getElementsbyTagName("body");
-body.addEventListener("scroll", event => {
-    body.style.color = "viridian"
+const busImage = document.querySelector(".container .intro img");
+console.log(busImage)
+busImage.addEventListener("dblclick", event => {
+    busImage.style.width = "100px"
+    busImage.style.height = "250px"
 })
