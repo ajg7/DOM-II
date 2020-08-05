@@ -109,13 +109,29 @@ sunHeader.addEventListener("auxclick", event => {
 
 /*7th Event Listener*/
 const mountainHeader = document.querySelector(".content-pick .destination:nth-child(2) h4")
-console.log(mountainHeader)
+const body = Array.from(document.getElementsByTagName("body"))
+console.log(body)
+
+
+document.addEventListener("keydown", event => {
+    mountainHeader.textContent = "Surprise!";
+    mountainHeader.style.color = "yellow";
+    mountainHeader.style.backgroundColor = "pink";
+
+    body[0].style.backgroundColor = "pink";
+})
 
 
 
 /*8th Event Listener*/
-const islandHeader = document.querySelector(".content-pick .destination:nth-child(3) h4")
-console.log(islandHeader)
+let islandHeader = document.querySelector(".content-pick .destination:nth-child(3) h4")
+islandHeader.setAttribute("draggable", "true");
+
+const draggingStart = event => {
+    islandHeader = event.target;
+    islandHeader.style.color = "orange"
+}
+islandHeader.addEventListener("dragstart", draggingStart, false);
 
 
 
@@ -126,6 +142,7 @@ console.log(buttons)
 buttons.forEach(ele => {
     ele.addEventListener("click", event => {
         let randomColors = ["blue", "green", "red", "yellow", "orange", "brown", "black", "seagrass", "violet"];
+        let randomNum = Math.floor(Math.random() * 1000)
 
 
         ele.style.width = `${randomNum.toString()}px`
