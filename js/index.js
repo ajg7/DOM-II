@@ -169,11 +169,13 @@ const navBar = document.querySelector ("header div");
 const theHeader =document.querySelector("header");
 
 theHeader.addEventListener("click", event =>{
-    alert("Hola Terra!");
+    alert("Hola Mon!");
     navBar.addEventListener("click", event => {
-        alert("Chaire, Ge!")
+        alert("Chaire Kosmos!")
+        event.stopPropagation()
     })
 })
+
 
 
 
