@@ -20,6 +20,7 @@ nav.forEach(ele => {
             ele.style.fontSize = "24px";
             ele.style.fontWeight = "none";
         }, 1500)
+        event.preventDefault()
     })
 })
 
@@ -147,7 +148,7 @@ buttons.forEach(ele => {
 
         ele.style.width = `${randomNum.toString()}px`
         ele.style.height = `${randomNum.toString()}px`
-        ele.style.backgroundColor = `${randomColors[Math.ceil(Math.random()*randomColors.length)]}`
+        ele.style.backgroundColor = `${randomColors[Math.round(Math.random()*randomColors.length)]}`
     })
 })
 
@@ -160,3 +161,17 @@ destinationsText.forEach(ele => {
         ele.textContent = "Pokem ipsum dolor sit amet Exeggutor Kecleon Wing Attack Doduo Red Unown. Sunt in culpa Drilbur Calcium Hoenn Shieldon Wynaut Charizard. Growl Venonat Scolipede Espeon Charizard Barboach Hidden Machine. Duis aute irure dolor in reprehenderit in voluptate they're comfy and easy to wear Onix what kind of Pokemon are you Fog Badge Ampharos Noctowl. Pewter City Marill Slakoth Bronzong Rattata Treecko Cottonee."
     })
 })
+
+
+/*Event Propogation*/
+
+const navBar = document.querySelector ("header div");
+const theHeader =document.querySelector("header");
+
+theHeader.addEventListener("click", event =>{
+    alert("Hola Terra!");
+    navBar.addEventListener("click", event => {
+        alert("Chaire, Ge!")
+    })
+})
+
